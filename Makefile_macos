@@ -1,0 +1,5 @@
+#MKL_LIBS = -L/opt/intel/mkl/lib/intel64 -lmkl_core -lmkl_intel_ilp64 -lmkl_sequential
+#THMKL_LIBS = -lthmkl_core
+
+make:
+	gcc -O3 -fopenmp -lm -march=native -mavx2 -m64 main2.c -o test
